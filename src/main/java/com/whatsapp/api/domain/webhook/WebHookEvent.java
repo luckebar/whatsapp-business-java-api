@@ -29,6 +29,9 @@ public class WebHookEvent {
     @JsonProperty("object")
     String object;
 
+    public WebHookEvent() {
+    }
+
     public WebHookEvent(List<Entry> entry, String object) {
         this.entry = entry;
         this.object = object;

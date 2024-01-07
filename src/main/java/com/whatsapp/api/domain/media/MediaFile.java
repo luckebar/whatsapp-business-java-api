@@ -8,6 +8,9 @@ public class MediaFile {
     public String fileName;
     public byte[] content;
 
+    public MediaFile() {
+    }
+
     public MediaFile(String fileName, byte[] content) {
         this.fileName = fileName;
         this.content = content;

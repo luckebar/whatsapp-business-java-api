@@ -13,6 +13,9 @@ public class Email {
     @JsonProperty("email")
     String email;
 
+    public Email() {
+    }
+
     public Email(String type, String email) {
         this.type = type;
         this.email = email;

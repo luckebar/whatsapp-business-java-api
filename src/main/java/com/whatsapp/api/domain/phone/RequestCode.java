@@ -19,6 +19,9 @@ public class RequestCode {
     @JsonProperty("language")
     LanguageType language;
 
+    public RequestCode() {
+    }
+
     public RequestCode(CodeMethodType codeMethod, LanguageType language) {
         this.codeMethod = codeMethod;
         this.language = language;

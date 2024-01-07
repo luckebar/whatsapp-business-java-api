@@ -10,6 +10,9 @@ public class GraphCommerceSettings {
     @JsonProperty("data")
     public List<CommerceDataItem> data;
 
+    public GraphCommerceSettings() {
+    }
+    
     public GraphCommerceSettings(List<CommerceDataItem> data) {
         this.data = data;
     }

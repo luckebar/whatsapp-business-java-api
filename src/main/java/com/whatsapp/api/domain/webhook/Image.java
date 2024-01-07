@@ -25,6 +25,9 @@ public class Image {
     @JsonProperty("id")
     String id;
 
+    public Image() {
+    }
+
     public Image(String sha256, String mimeType, String caption, String id) {
         this.sha256 = sha256;
         this.mimeType = mimeType;

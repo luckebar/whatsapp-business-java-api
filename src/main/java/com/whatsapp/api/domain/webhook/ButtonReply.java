@@ -16,6 +16,9 @@ public class ButtonReply {
     @JsonProperty("title")
     String title;
 
+    public ButtonReply() {
+    }
+
     public ButtonReply(String id, String title) {
         this.id = id;
         this.title = title;

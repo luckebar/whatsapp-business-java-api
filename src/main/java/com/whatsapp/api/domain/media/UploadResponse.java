@@ -10,6 +10,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UploadResponse {
     @JsonProperty("id") String id;
 
+    public UploadResponse() {
+    }
+
     public UploadResponse(String id) {
         this.id = id;
     }

@@ -19,6 +19,9 @@ public class Product {
     @JsonProperty("currency")
     String currency;
 
+    public Product() {
+    }
+
     public Product(String quantity, String productRetailerId, String itemPrice, String currency) {
         this.quantity = quantity;
         this.productRetailerId = productRetailerId;

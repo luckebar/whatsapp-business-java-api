@@ -15,6 +15,9 @@ public class MessageTemplateIDResponse {
     @JsonProperty("id")
     String id;
 
+    public MessageTemplateIDResponse() {
+    }
+
     public MessageTemplateIDResponse(String id) {
         this.id = id;
     }

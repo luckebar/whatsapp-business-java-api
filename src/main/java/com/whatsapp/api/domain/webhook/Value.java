@@ -90,6 +90,9 @@ public class Value {
     @JsonProperty("restriction_info")
     List<RestrictionInfo> restrictionInfo;
 
+    public Value() {
+    }
+
     public Value(Metadata metadata, String messagingProduct, List<Message> messages, List<Contact> contacts, List<Status> statuses, EventType event, String phoneNumber, String messageTemplateId, String messageTemplateName, String messageTemplateLanguage, String reason, String displayPhoneNumber, String decision, String requestedVerifiedName, Object rejectionReason, DisableInfo disableInfo, String currentLimit, BanInfo banInfo, List<RestrictionInfo> restrictionInfo) {
         this.metadata = metadata;
         this.messagingProduct = messagingProduct;

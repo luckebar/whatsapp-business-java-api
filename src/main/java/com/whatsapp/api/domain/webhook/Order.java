@@ -18,6 +18,9 @@ public class Order {
     @JsonProperty("text")
     String text;
 
+    public Order() {
+    }
+
     public Order(String catalogId, List<Product> productItems, String text) {
         this.catalogId = catalogId;
         this.productItems = productItems;

@@ -19,6 +19,9 @@ public class PhoneNumbers {
     @JsonProperty("paging")
     Paging paging;
 
+    public PhoneNumbers() {
+    }
+
     public PhoneNumbers(List<PhoneNumber> data, Paging paging) {
         this.data = data;
         this.paging = paging;

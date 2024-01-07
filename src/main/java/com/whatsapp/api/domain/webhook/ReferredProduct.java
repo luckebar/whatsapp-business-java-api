@@ -13,6 +13,9 @@ public class ReferredProduct {
     @JsonProperty("product_retailer_id")
     String productRetailerId;
 
+    public ReferredProduct() {
+    }
+
     public ReferredProduct(String catalogId, String productRetailerId) {
         this.catalogId = catalogId;
         this.productRetailerId = productRetailerId;

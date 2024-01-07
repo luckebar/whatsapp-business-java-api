@@ -28,6 +28,9 @@ public class Address {
     @JsonProperty("type")
     String type;
 
+    public Address() {
+    }
+
     public Address(String zip, String country, String countryCode, String city, String street, String state, String type) {
         this.zip = zip;
         this.country = country;

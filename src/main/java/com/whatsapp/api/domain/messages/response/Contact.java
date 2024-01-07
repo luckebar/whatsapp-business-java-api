@@ -15,6 +15,9 @@ public class Contact {
     @JsonProperty("wa_id")
     String waId;
 
+    public Contact() {
+    }
+
     public Contact(String input, String waId) {
         this.input = input;
         this.waId = waId;

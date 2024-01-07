@@ -10,6 +10,9 @@ public class DisableInfo {
     @JsonProperty("disable_date")
     String disableDate;
 
+    public DisableInfo() {
+    }
+
     public DisableInfo(String disableDate) {
         this.disableDate = disableDate;
     }

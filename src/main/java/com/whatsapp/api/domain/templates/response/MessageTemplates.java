@@ -18,6 +18,9 @@ public class MessageTemplates {
     @JsonProperty("paging")
     Paging paging;
 
+    public MessageTemplates() {
+    }
+
     public MessageTemplates(List<Template> data, Paging paging) {
         this.data = data;
         this.paging = paging;

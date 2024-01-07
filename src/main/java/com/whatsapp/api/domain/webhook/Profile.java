@@ -12,6 +12,9 @@ public class Profile {
     @JsonProperty("name")
     String name;
 
+    public Profile() {
+    }
+
     public Profile(String name) {
         this.name = name;
     }

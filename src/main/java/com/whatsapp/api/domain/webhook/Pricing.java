@@ -24,6 +24,9 @@ public class Pricing {
     @JsonProperty("billable")
     boolean billable;
 
+    public Pricing() {
+    }
+
     public Pricing(String pricingModel, String category, boolean billable) {
         this.pricingModel = pricingModel;
         this.category = category;

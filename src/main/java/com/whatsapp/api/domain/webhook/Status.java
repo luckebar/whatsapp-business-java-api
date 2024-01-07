@@ -60,6 +60,9 @@ public class Status {
     @JsonProperty("errors")
     List<Error> errors;
 
+    public Status() {
+    }
+
     public Status(String id, Conversation conversation, Pricing pricing, String recipientId, MessageStatus status, String timestamp, List<Error> errors) {
         this.id = id;
         this.conversation = conversation;

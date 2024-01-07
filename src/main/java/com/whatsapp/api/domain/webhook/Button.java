@@ -17,6 +17,9 @@ public class Button {
     @JsonProperty("text")
     String text;
 
+    public Button() {
+    }
+
     public Button(String paylod, String text) {
         this.paylod = paylod;
         this.text = text;

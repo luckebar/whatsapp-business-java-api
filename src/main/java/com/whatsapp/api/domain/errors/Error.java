@@ -35,6 +35,9 @@ public class Error {
     @JsonProperty("error_user_msg")
     String errorUserMsg;
 
+    public Error() {
+    }
+
     public Error(Integer code, String details, Integer errorSubcode, String fbtraceId, String message, String messagingProduct, ErrorData errorData, String type, Boolean isTransient, String errorUserSubtitle, String errorUserMsg) {
         this.code = code;
         this.details = details;

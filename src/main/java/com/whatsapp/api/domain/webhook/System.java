@@ -25,6 +25,9 @@ public class System {
     @JsonProperty("type")
     String type;
 
+    public System() {
+    }
+
     public System(String newWaId, String body, String type) {
         this.newWaId = newWaId;
         this.body = body;

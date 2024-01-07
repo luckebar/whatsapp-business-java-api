@@ -12,6 +12,9 @@ public class Text {
     @JsonProperty("body")
     String body;
 
+    public Text() {
+    }
+
     public Text(String body) {
         this.body = body;
     }

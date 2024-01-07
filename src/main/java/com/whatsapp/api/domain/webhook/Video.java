@@ -26,6 +26,9 @@ public class Video {
     @JsonProperty("id")
     String id;
 
+    public Video() {
+    }
+
     public Video(String mimeType, String sha256, String caption, String id) {
         this.mimeType = mimeType;
         this.sha256 = sha256;

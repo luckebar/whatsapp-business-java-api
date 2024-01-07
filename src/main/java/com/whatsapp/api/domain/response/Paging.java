@@ -15,6 +15,9 @@ public class Paging {
     @JsonProperty("next")
     String next;
 
+    public Paging() {
+    }
+
     public Paging(Cursors cursors, String next) {
         this.cursors = cursors;
         this.next = next;

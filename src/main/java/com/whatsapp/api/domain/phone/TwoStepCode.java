@@ -12,6 +12,9 @@ public class TwoStepCode {
     @JsonProperty("pin")
     String pin;
 
+    public TwoStepCode() {
+    }
+
     public TwoStepCode(String pin) {
         this.pin = pin;
     }

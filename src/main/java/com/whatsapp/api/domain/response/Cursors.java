@@ -15,6 +15,9 @@ public class Cursors {
     @JsonProperty("after")
     String after;
 
+    public Cursors() {
+    }
+
     public Cursors(String before, String after) {
         this.before = before;
         this.after = after;

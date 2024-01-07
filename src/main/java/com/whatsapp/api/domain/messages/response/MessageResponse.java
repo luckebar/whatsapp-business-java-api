@@ -20,6 +20,9 @@ public class MessageResponse {
     @JsonProperty("messages")
     List<Message> messages;
 
+    public MessageResponse() {
+    }
+
     public MessageResponse(String messagingProduct, List<Contact> contacts, List<Message> messages) {
         this.messagingProduct = messagingProduct;
         this.contacts = contacts;

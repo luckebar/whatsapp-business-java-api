@@ -23,6 +23,9 @@ The phone number of the business account that is receiving the Webhooks.
     @JsonProperty("display_phone_number")
     String displayPhoneNumber;
 
+    public Metadata() {
+    }
+
     public Metadata(String phoneNumberId, String displayPhoneNumber) {
         this.phoneNumberId = phoneNumberId;
         this.displayPhoneNumber = displayPhoneNumber;

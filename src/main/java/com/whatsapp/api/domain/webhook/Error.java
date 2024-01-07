@@ -21,6 +21,9 @@ public class Error {
     @JsonProperty("href")
     String href;
 
+    public Error() {
+    }
+
     public Error(int code, String title, String message, ErrorData errorData, String href) {
         this.code = code;
         this.title = title;

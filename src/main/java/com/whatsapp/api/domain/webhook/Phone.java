@@ -16,6 +16,9 @@ public class Phone {
     @JsonProperty("type")
     String type;
 
+    public Phone() {
+    }
+
     public Phone(String phone, String waId, String type) {
         this.phone = phone;
         this.waId = waId;

@@ -24,6 +24,9 @@ public class Audio {
     @JsonProperty("voice")
     boolean voice;
 
+    public Audio() {
+    }
+
     public Audio(String mimeType, String sha256, String id, boolean voice) {
         this.mimeType = mimeType;
         this.sha256 = sha256;

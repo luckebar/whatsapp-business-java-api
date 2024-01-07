@@ -121,6 +121,9 @@ public class Message {
     @JsonProperty("document")
     Document document;
 
+    public Message() {
+    }
+
     public Message(Reaction reaction, Image image, Sticker sticker, Location location, List<Contact> contacts, Button button, Context context, String from, String id, Text text, List<Error> errors, MessageType type, Interactive interactive, String timestamp, Referral referral, Order order, System system, Video video, Audio audio, Document document) {
         this.reaction = reaction;
         this.image = image;

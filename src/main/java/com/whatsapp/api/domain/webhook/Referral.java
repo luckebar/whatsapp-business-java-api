@@ -51,6 +51,9 @@ public class Referral {
     @JsonProperty("source_url")
     String sourceUrl;
 
+    public Referral() {
+    }
+
     public Referral(String videoUrl, String mediaType, String imageUrl, String sourceType, String sourceId, String body, String thumbnailUrl, String headline, String sourceUrl) {
         this.videoUrl = videoUrl;
         this.mediaType = mediaType;

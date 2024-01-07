@@ -18,6 +18,9 @@ public class Media {
 
     @JsonProperty("file_size") long fileSize;
 
+    public Media() {
+    }
+
     public Media(String sha256, FileType mimeType, String messagingProduct, String id, String url, long fileSize) {
         this.sha256 = sha256;
         this.mimeType = mimeType;

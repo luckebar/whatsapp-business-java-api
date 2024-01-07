@@ -16,6 +16,9 @@ public class Org {
     @JsonProperty("title")
     String title;
 
+    public Org() {
+    }
+
     public Org(String company, String department, String title) {
         this.company = company;
         this.department = department;

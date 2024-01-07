@@ -10,6 +10,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Message {
     @JsonProperty("id") String id;
 
+    public Message() {
+    }
+
     public Message(String id) {
         this.id = id;
     }

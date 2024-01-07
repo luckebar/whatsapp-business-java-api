@@ -46,6 +46,9 @@ public class PhoneNumber {
     @JsonProperty("name_status")
     NameStatusType nameStatus;
 
+    public PhoneNumber() {
+    }
+
     public PhoneNumber(String displayPhoneNumber, QualityRatingType qualityRating, String verifiedName, String id, String codeVerificationStatus, NameStatusType nameStatus) {
         this.displayPhoneNumber = displayPhoneNumber;
         this.qualityRating = qualityRating;

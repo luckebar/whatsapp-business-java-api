@@ -22,6 +22,9 @@ public class Location {
     @JsonProperty("url")
     String url;
 
+    public Location() {
+    }
+
     public Location(String address, double latitude, String name, double longitude, String url) {
         this.address = address;
         this.latitude = latitude;

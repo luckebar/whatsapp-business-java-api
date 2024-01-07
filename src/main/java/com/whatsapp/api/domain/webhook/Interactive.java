@@ -25,6 +25,9 @@ public class Interactive {
     @JsonProperty("button_reply")
     ButtonReply buttonReply;
 
+    public Interactive() {
+    }
+
     public Interactive(ListReply listReply, String type, ButtonReply buttonReply) {
         this.listReply = listReply;
         this.type = type;

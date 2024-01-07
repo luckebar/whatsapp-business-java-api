@@ -25,6 +25,9 @@ public class Contact {
     @JsonProperty("wa_id")
     String waId;
 
+    public Contact() {
+    }
+
     public Contact(Profile profile, Name name, List<Phone> phones, String waId) {
         this.profile = profile;
         this.name = name;

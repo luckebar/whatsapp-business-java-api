@@ -14,6 +14,9 @@ public class RestrictionInfo {
     @JsonProperty("expiration")
     String expiration;
 
+    public RestrictionInfo() {
+    }
+
     public RestrictionInfo(RestrictionType restrictionType, String expiration) {
         this.restrictionType = restrictionType;
         this.expiration = expiration;

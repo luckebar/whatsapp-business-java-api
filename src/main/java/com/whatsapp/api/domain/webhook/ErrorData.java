@@ -10,6 +10,9 @@ public class ErrorData {
     @JsonProperty("details")
     String details;
 
+    public ErrorData() {
+    }
+
     public ErrorData(String details) {
         this.details = details;
     }

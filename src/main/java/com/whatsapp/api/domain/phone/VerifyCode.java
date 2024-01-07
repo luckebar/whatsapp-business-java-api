@@ -10,6 +10,9 @@ public class VerifyCode {
     @JsonProperty("code")
     String code;
 
+    public VerifyCode() {
+    }
+
     public VerifyCode(String code) {
         this.code = code;
     }

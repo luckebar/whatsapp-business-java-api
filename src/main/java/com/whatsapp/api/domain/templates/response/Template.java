@@ -32,6 +32,9 @@ public class Template {
     @JsonProperty("status")
     String status;
 
+    public Template() {
+    }
+
     public Template(List<Component<?>> components, String name, String language, String id, Category category, Category previousCategory, String status) {
         this.components = components;
         this.name = name;

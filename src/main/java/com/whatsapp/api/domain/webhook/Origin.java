@@ -21,6 +21,9 @@ public class Origin {
     @JsonProperty("type")
     String type;
 
+    public Origin() {
+    }
+
     public Origin(String type) {
         this.type = type;
     }

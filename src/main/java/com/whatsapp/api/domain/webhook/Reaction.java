@@ -17,6 +17,9 @@ public class Reaction {
     @JsonProperty("message_id")
     String messageId;
 
+    public Reaction() {
+    }
+
     public Reaction(String emoji, String messageId) {
         this.emoji = emoji;
         this.messageId = messageId;

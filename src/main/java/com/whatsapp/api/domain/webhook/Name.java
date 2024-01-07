@@ -25,6 +25,9 @@ public class Name {
     @JsonProperty("formatted_name")
     String formattedName;
 
+    public Name() {
+    }
+
     public Name(String prefix, String lastName, String middleName, String suffix, String firstName, String formattedName) {
         this.prefix = prefix;
         this.lastName = lastName;

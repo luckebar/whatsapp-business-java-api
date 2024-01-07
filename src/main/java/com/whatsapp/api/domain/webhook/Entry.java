@@ -28,6 +28,9 @@ public class Entry {
     @JsonProperty("time")
     long time;
 
+    public Entry() {
+    }
+
     public Entry(List<Change> changes, String id, long time) {
         this.changes = changes;
         this.id = id;

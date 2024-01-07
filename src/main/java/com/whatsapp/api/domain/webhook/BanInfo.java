@@ -13,6 +13,9 @@ public class BanInfo {
     @JsonProperty("waba_ban_date")
     String wabaBanDate;
 
+    public BanInfo() {
+    }
+
     public BanInfo(String wabaBanState, String wabaBanDate) {
         this.wabaBanState = wabaBanState;
         this.wabaBanDate = wabaBanDate;

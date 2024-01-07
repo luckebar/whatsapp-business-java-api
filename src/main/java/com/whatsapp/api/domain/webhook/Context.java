@@ -33,6 +33,9 @@ public class Context {
     @JsonProperty("frequently_forwarded")
     boolean frequentlyForwarded;
 
+    public Context() {
+    }
+
     public Context(String from, ReferredProduct referredProduct, String id, boolean forwarded, boolean frequentlyForwarded) {
         this.from = from;
         this.referredProduct = referredProduct;

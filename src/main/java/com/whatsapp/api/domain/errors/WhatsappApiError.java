@@ -11,6 +11,9 @@ public class WhatsappApiError{
     @JsonProperty("error")
     Error error;
 
+    public WhatsappApiError() {
+    }
+
     public WhatsappApiError(Error error) {
         this.error = error;
     }

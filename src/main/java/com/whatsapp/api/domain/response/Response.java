@@ -12,6 +12,9 @@ public class Response {
     @JsonProperty("success")
     boolean success;
 
+    public Response() {
+    }
+
     public Response(boolean success) {
         this.success = success;
     }

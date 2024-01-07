@@ -23,6 +23,9 @@ public class Conversation {
     @JsonProperty("id")
     String id;
 
+    public Conversation() {
+    }
+
     public Conversation(String expirationTimestamp, Origin origin, String id) {
         this.expirationTimestamp = expirationTimestamp;
         this.origin = origin;

@@ -29,6 +29,9 @@ public class Document {
     @JsonProperty("caption")
     String caption;
 
+    public Document() {
+    }
+
     public Document(String filename, String mimeType, String sha256, String id, String caption) {
         this.filename = filename;
         this.mimeType = mimeType;

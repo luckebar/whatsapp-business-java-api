@@ -13,6 +13,9 @@ public class Language {
     @JsonProperty("code")
     LanguageType code;
 
+    public Language() {
+    }
+
     public Language(LanguageType code) {
         this.code = code;
     }

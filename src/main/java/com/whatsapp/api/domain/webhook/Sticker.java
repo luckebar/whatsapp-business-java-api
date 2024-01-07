@@ -24,6 +24,9 @@ public class Sticker {
     @JsonProperty("animated")
     boolean animated;
 
+    public Sticker() {
+    }
+
     public Sticker(String sha256, String mimeType, String id, boolean animated) {
         this.sha256 = sha256;
         this.mimeType = mimeType;

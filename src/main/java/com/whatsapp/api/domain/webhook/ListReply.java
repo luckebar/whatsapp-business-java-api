@@ -26,6 +26,9 @@ public class ListReply {
         this.title = title;
     }
 
+    public ListReply() {
+    }
+
     public String description() {
         return description;
     }

@@ -16,6 +16,9 @@ public class ErrorData {
     @JsonProperty("blame_field_specs")
     Object blameFieldSpecs;
 
+    public ErrorData() {
+    }
+
     public ErrorData(String messagingProduct, String details, Object blameFieldSpecs) {
         this.messagingProduct = messagingProduct;
         this.details = details;

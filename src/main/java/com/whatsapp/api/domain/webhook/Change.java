@@ -21,6 +21,9 @@ A value object. Contains details of the changes related to the specified field.
     @JsonProperty("value")
     Value value;
 
+    public Change() {
+    }
+
     public Change(FieldType field, Value value) {
         this.field = field;
         this.value = value;
