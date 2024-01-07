@@ -1,4 +1,4 @@
-# [ <img src="https://user-images.githubusercontent.com/7831956/222028018-181cf927-781c-40a9-af7a-e3c3d1e39390.png" width="68" height="68"> Whatsapp Business java api SDK](https://bindambc.github.io/whatsapp-business-java-api/)
+# [ <img src="https://user-images.githubusercontent.com/7831956/222028018-181cf927-781c-40a9-af7a-e3c3d1e39390.png" width="68" height="68">Fork Whatsapp Business java api SDK For JDK 1.8](https://github.com/luckebar/whatsapp-business-java-api/)
 
 [![Java CI with Maven](https://github.com/Bindambc/whatsapp-business-java-api/actions/workflows/maven-ci.yml/badge.svg)](https://github.com/Bindambc/whatsapp-business-java-api/actions/workflows/maven-ci.yml)
 [![CodeQL](https://github.com/Bindambc/whatsapp-business-java-api/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Bindambc/whatsapp-business-java-api/actions/workflows/codeql-analysis.yml)
@@ -65,7 +65,7 @@ This sdk implements whatsapp business cloud api version v16.0. [See api changelo
 
 ## :hammer_and_wrench: Installation
 
-:warning: this library is compatible with **java 17+**.
+:warning: this library is compatible with **java 1.8+**.
 
 ### Maven
 
@@ -84,9 +84,9 @@ This sdk implements whatsapp business cloud api version v16.0. [See api changelo
 
 ```xml
    <dependency>
-      <groupId>com.github.Bindambc</groupId>
+      <groupId>com.github.luckebar</groupId>
       <artifactId>whatsapp-business-java-api</artifactId>
-      <version>v0.3.4</version>
+      <version>v0.3.4.1</version>
    </dependency>
 ```
 
@@ -107,13 +107,13 @@ This sdk implements whatsapp business cloud api version v16.0. [See api changelo
 
 ```gradle
 	dependencies {
-	        implementation 'com.github.Bindambc:whatsapp-business-java-api:v0.3.4'
+	        implementation 'com.github.luckebar:whatsapp-business-java-api:v0.3.4.1'
 	}
 ```
 
 **3. Install library into your Maven's local repository by running `mvn install`**
 
-Alternatively, you can clone this repository and run the [examples](https://github.com/Bindambc/whatsapp-business-java-api/tree/main/src/test/java/com/whatsapp/api/examples).
+Alternatively, you can clone this repository and run the [examples](https://github.com/luckebar/whatsapp-business-java-api/tree/main/src/test/java/com/whatsapp/api/examples).
 
 [:arrow_heading_up: back](#link-links)
 
@@ -123,7 +123,7 @@ Alternatively, you can clone this repository and run the [examples](https://gith
 
 There are two client classes that can be used to interact with the API:
 
-1. [`WhatsappBusinessCloudApi`](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/main/java/com/whatsapp/api/impl/WhatsappBusinessCloudApi.java), a synchronous/blocking [WhatsApp Business Platform Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api) client;
+1. [`WhatsappBusinessCloudApi`](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/main/java/com/whatsapp/api/impl/WhatsappBusinessCloudApi.java), a synchronous/blocking [WhatsApp Business Platform Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api) client;
 > Send and receive messages using a cloud-hosted version of the WhatsApp Business Platform. The Cloud API allows you to implement WhatsApp Business APIs without the cost of hosting of your own servers and also allows you to more easily scale your business messaging.
 
 
@@ -133,7 +133,7 @@ There are two client classes that can be used to interact with the API:
  WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi();
 ```
 
-2. [`WhatsappBusinessManagementApi`](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/main/java/com/whatsapp/api/impl/WhatsappBusinessManagementApi.java), a synchronous/blocking [WhatsApp Business Management API](https://developers.facebook.com/docs/whatsapp/business-management-api) client;
+2. [`WhatsappBusinessManagementApi`](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/main/java/com/whatsapp/api/impl/WhatsappBusinessManagementApi.java), a synchronous/blocking [WhatsApp Business Management API](https://developers.facebook.com/docs/whatsapp/business-management-api) client;
 >The WhatsApp Business Management API allows you to programmatically manage your WhatsApp Business Account assets, such as message templates and phone numbers.
 
 ```java
@@ -142,14 +142,14 @@ WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
 WhatsappBusinessManagementApi whatsappBusinessCloudApi = factory.newBusinessManagementApi();
  ```
 
-These can be instantiated through the corresponding factory method of [`WhatsappApiFactory`](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/main/java/com/whatsapp/api/WhatsappApiFactory.java), by passing the token, which can be created following the instructions at [whatsapp](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started).
+These can be instantiated through the corresponding factory method of [`WhatsappApiFactory`](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/main/java/com/whatsapp/api/WhatsappApiFactory.java), by passing the token, which can be created following the instructions at [whatsapp](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started).
 
 [:arrow_heading_up: back](#link-links)
 
 ---
 ## :eyes: Proxy 
 
-You can add a proxy to the api by calling the method `setHttpProxy(...)` of class [`WhatsappApiServiceGenerator`](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/main/java/com/whatsapp/api/WhatsappApiServiceGenerator.java)
+You can add a proxy to the api by calling the method `setHttpProxy(...)` of class [`WhatsappApiServiceGenerator`](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/main/java/com/whatsapp/api/WhatsappApiServiceGenerator.java)
 
 ```java
 public static void setHttpProxy(String host, int port, String username, String pwd)
@@ -166,7 +166,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ### :scroll: Examples (Proxy):
 
-#### [Direct proxy without authentication credentials:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/proxy/SendMessageByProxyNoCredentials.java)
+#### [Direct proxy without authentication credentials:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/proxy/SendMessageByProxyNoCredentials.java)
 ```java
    WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TestConstants.TOKEN);
 
@@ -184,7 +184,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
         System.out.println(messageResponse);
 ```
-#### [With authentication credentials:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/proxy/SendMessageByProxyNoCredentials.java)
+#### [With authentication credentials:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/proxy/SendMessageByProxyNoCredentials.java)
 ```java
  WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TestConstants.TOKEN);
 
@@ -208,7 +208,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ## :scroll: Examples (Sending messages)
 
-#### [Sending a simple text message:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendTextMessageExample.java)
+#### [Sending a simple text message:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendTextMessageExample.java)
 
 ```java
  	WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TestUtils.TOKEN);
@@ -232,7 +232,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 [:arrow_heading_up: back](#link-links)
 
 ---        
-#### [Sending a message with buttons (template):](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendTemplateButtonMessageExample.java)
+#### [Sending a message with buttons (template):](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendTemplateButtonMessageExample.java)
 
 ```java
 	WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TestConstants.TOKEN);
@@ -263,7 +263,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 [:arrow_heading_up: back](#link-links)
 
 ---
-#### [Sending a message with a contact](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendContactMessageExample.java)
+#### [Sending a message with a contact](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendContactMessageExample.java)
 
 ```java
  	WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TestUtils.TOKEN);
@@ -293,7 +293,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ---
 
-#### [Sending an interactive message with buttons:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendInteractiveMessageExample.java)
+#### [Sending an interactive message with buttons:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendInteractiveMessageExample.java)
 
 ```java
  	WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TestUtils.TOKEN);
@@ -333,7 +333,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ---
 
-#### [Sending an interactive message with a list:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendInteractiveMessageExample.java)
+#### [Sending an interactive message with a list:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendInteractiveMessageExample.java)
 
 ```java
  	WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TestUtils.TOKEN);
@@ -401,7 +401,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ---
 
-#### [Sending an audio message:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendAudioMessageExample.java)
+#### [Sending an audio message:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendAudioMessageExample.java)
 
 ```java
 		WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
@@ -427,7 +427,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ---
 
-#### [Sending a document message:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendDocumentMessageExample.java)
+#### [Sending a document message:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendDocumentMessageExample.java)
 
 ```java
 
@@ -457,7 +457,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ---
 
-#### [Sending an image link message:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendImageLinkMessageExample.java)
+#### [Sending an image link message:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendImageLinkMessageExample.java)
 
 ```java
 		WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
@@ -482,7 +482,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ---
 
-#### [Sending an image message:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendImageMessageExample.java)
+#### [Sending an image message:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendImageMessageExample.java)
 
 ```java
 		WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
@@ -511,7 +511,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ---
 
-#### [Sending a sticker message:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendStickerExample.java)
+#### [Sending a sticker message:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendStickerExample.java)
 
 ```java
 	WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
@@ -539,7 +539,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ---
 
-#### [Sending a video message:](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendVideoStickerExample.java)
+#### [Sending a video message:](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/SendVideoStickerExample.java)
 
 ```java
 		WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
@@ -565,7 +565,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ## :scroll: Examples (WhatsApp Business Management API)
 
-#### [Create a message template](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/CreateMessageTemplate3Example.java)
+#### [Create a message template](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/CreateMessageTemplate3Example.java)
 
 ```java
         WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
@@ -604,7 +604,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 
 ---
 
-### :heavy_plus_sign: [See more examples here](https://github.com/Bindambc/whatsapp-business-java-api/tree/main/src/test/java/com/whatsapp/api/examples).
+### :heavy_plus_sign: [See more examples here](https://github.com/luckebar/whatsapp-business-java-api/tree/main/src/test/java/com/whatsapp/api/examples).
 
 [:arrow_heading_up: back](#link-links)
 
@@ -613,7 +613,7 @@ WhatsappBusinessCloudApi whatsappBusinessCloudApi = factory.newBusinessCloudApi(
 ## :arrow_down: WebHooks
 Webhooks are triggered when a customer performs an action or the status for a message a business sends a customer changes.
 
-WebHook objects are mapped on [**WebHookEvent class**](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/main/java/com/whatsapp/api/domain/webhook/WebHookEvent.java)
+WebHook objects are mapped on [**WebHookEvent class**](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/main/java/com/whatsapp/api/domain/webhook/WebHookEvent.java)
 
 See [Whatsapp api documentation](https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks) for more details.
 **Example:**
@@ -623,7 +623,7 @@ See [Whatsapp api documentation](https://developers.facebook.com/docs/whatsapp/c
 //using WebHook.constructEvent() to deserialize event
 WebHookEvent event = WebHook.constructEvent(payload);
 ```
-See an example [here](https://github.com/Bindambc/whatsapp-business-java-api/tree/main/src/test/java/com/whatsapp/api/examples/WebHookExample.java)
+See an example [here](https://github.com/luckebar/whatsapp-business-java-api/tree/main/src/test/java/com/whatsapp/api/examples/WebHookExample.java)
 
 You get a webhooks notification:
 
@@ -667,7 +667,7 @@ You can use 4 different endpoints to manage your media:
 
 **See the examples:**
 
-#### [Uploading media](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/UploadMediaExample.java)
+#### [Uploading media](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/UploadMediaExample.java)
 
 ```java
         WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
@@ -686,7 +686,7 @@ You can use 4 different endpoints to manage your media:
 ```
 [:arrow_heading_up: back](#link-links)
 
-#### [Retrieving the URL for a specific media](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/RetrieveMediaUrlExample.java)
+#### [Retrieving the URL for a specific media](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/RetrieveMediaUrlExample.java)
 
 ```java
         WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
@@ -699,7 +699,7 @@ You can use 4 different endpoints to manage your media:
 ```
 [:arrow_heading_up: back](#link-links)
 
-#### [Deleting a specific media](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/DeleteMediaExample.java)
+#### [Deleting a specific media](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/DeleteMediaExample.java)
 
 ```java
         WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
@@ -713,7 +713,7 @@ You can use 4 different endpoints to manage your media:
 ```
 [:arrow_heading_up: back](#link-links)
 
-#### [Downloading media from a media URL](https://github.com/Bindambc/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/DownloadMediaExample.java)
+#### [Downloading media from a media URL](https://github.com/luckebar/whatsapp-business-java-api/blob/main/src/test/java/com/whatsapp/api/examples/DownloadMediaExample.java)
 
 ```java
         WhatsappApiFactory factory = WhatsappApiFactory.newInstance(TOKEN);
@@ -741,7 +741,7 @@ Thank you for your interest in the WhatsApp Business Java API! We look forward t
 
 ## :hammer_and_wrench: Get Involved 
 
-[Contributing:](https://github.com/Bindambc/whatsapp-business-java-api/issues)
+[Contributing:](https://github.com/luckebar/whatsapp-business-java-api/issues)
 
 We welcome contributions from anyone who is interested in helping to improve this project. If you would like to contribute, here are a few ways you can get involved:
 
