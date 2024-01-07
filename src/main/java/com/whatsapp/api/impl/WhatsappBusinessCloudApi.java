@@ -17,6 +17,7 @@ import okhttp3.MultipartBody.Part;
 import static com.whatsapp.api.WhatsappApiServiceGenerator.createService;
 import static com.whatsapp.api.WhatsappApiServiceGenerator.executeDownloadSync;
 import static com.whatsapp.api.WhatsappApiServiceGenerator.executeSync;
+import okhttp3.RequestBody;
 
 /**
  * Implementation of WhatsApp Business Platform Cloud API with synchronous/blocking
@@ -68,10 +69,10 @@ public class WhatsappBusinessCloudApi {
      */
     public UploadResponse uploadMedia(String phoneNumberId, String fileName, FileType fileType, byte[] file) {
 
-        var requestFile = MultipartBody.create(file, MediaType.parse(fileType.getType()));
+        RequestBody requestFile = MultipartBody.create(file, MediaType.parse(fileType.getType()));
         Part body = Part.createFormData("file", fileName, requestFile);
 
-        var messageProduct = Part.createFormData("messaging_product", "whatsapp");
+        Part messageProduct = Part.createFormData("messaging_product", "whatsapp");
 
         return executeSync(whatsappBusinessCloudApiService.uploadMedia(phoneNumberId, body, messageProduct));
     }

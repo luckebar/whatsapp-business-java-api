@@ -91,7 +91,6 @@ public class Contact {
      * @return the contact
      * @deprecated use {@link #addEmail(Email)} instead
      */
-    @Deprecated(forRemoval = true)
     public Contact addEmails(Email email) {
         if (this.emails == null) this.emails = new ArrayList<>();
 
@@ -139,7 +138,6 @@ public class Contact {
      * @return the contact
      * @deprecated use {@link #addAddress(Address)}
      */
-    @Deprecated(forRemoval = true)
     public Contact addAddresses(Address address) {
         if (this.addresses == null) this.addresses = new ArrayList<>();
         this.addresses.add(address);
@@ -185,7 +183,6 @@ public class Contact {
      * @return the contact
      * @deprecated use {@link #addUrl(Url)}
      */
-    @Deprecated(forRemoval = true)
     public Contact addUrls(Url url) {
         if (this.urls == null) this.urls = new ArrayList<>();
 
@@ -275,7 +272,6 @@ public class Contact {
      * @return the contact
      * @deprecated use {@link Contact#addPhone(Phone)} instead
      */
-    @Deprecated(forRemoval = true)
     public Contact addPhones(Phone phone) {
         if (this.phones == null) this.phones = new ArrayList<>();
         this.phones.add(phone);

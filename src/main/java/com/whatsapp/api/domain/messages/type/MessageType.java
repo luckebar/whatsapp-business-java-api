@@ -91,7 +91,7 @@ public enum MessageType {
     /**
      * Hsm message type.
      */
-    @Deprecated(forRemoval = true) HSM("hsm");//
+    HSM("hsm");//
 
     private final String value;
 

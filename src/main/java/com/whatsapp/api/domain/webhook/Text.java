@@ -7,7 +7,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  * @param body The text of the text message.
  */
-public record Text(
+public class Text {
 
-        @JsonProperty("body") String body) {
+    @JsonProperty("body")
+    String body;
+
+    public Text(String body) {
+        this.body = body;
+    }
+
+    public String body() {
+        return body;
+    }
+
+    public void body(String body) {
+        this.body = body;
+    }
+
 }

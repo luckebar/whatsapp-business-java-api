@@ -7,9 +7,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * The type Paging.
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public record Paging(@JsonProperty("cursors") Cursors cursors,
+public class Paging {
 
-                     @JsonProperty("next") String next) {
+    @JsonProperty("cursors")
+    Cursors cursors;
 
+    @JsonProperty("next")
+    String next;
+
+    public Paging(Cursors cursors, String next) {
+        this.cursors = cursors;
+        this.next = next;
+    }
+
+    public Cursors cursors() {
+        return cursors;
+    }
+
+    public void cursors(Cursors cursors) {
+        this.cursors = cursors;
+    }
+
+    public String next() {
+        return next;
+    }
+
+    public void next(String next) {
+        this.next = next;
+    }
 
 }

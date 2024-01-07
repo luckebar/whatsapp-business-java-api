@@ -6,9 +6,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public record GraphCommerceSettings(
+public class GraphCommerceSettings {
+    @JsonProperty("data")
+    public List<CommerceDataItem> data;
 
-        @JsonProperty("data")
-        List<CommerceDataItem> data
-) {
+    public GraphCommerceSettings(List<CommerceDataItem> data) {
+        this.data = data;
+    }
+
+    public List<CommerceDataItem> data() {
+        return data;
+    }
+
+    public void data(List<CommerceDataItem> data) {
+        this.data = data;
+    }
+
 }

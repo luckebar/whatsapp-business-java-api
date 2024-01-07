@@ -12,7 +12,7 @@ public class Formatter {
      * @return text formatted in italic. Example: <i>"italic text"</i>
      */
     public static String italic(String text) {
-        if (text == null || text.isBlank()) return text;
+        if (text == null || text.trim().length() == 0) return text;
         String italic = "_";
         return italic + text + italic;
     }
@@ -24,7 +24,7 @@ public class Formatter {
      * @return bold formatted text. Example: <b>"bold text"</b>
      */
     public static String bold(String text) {
-        if (text == null || text.isBlank()) return text;
+        if (text == null || text.trim().length() == 0) return text;
         String bold = "*";
         return bold + text + bold;
     }
@@ -36,7 +36,7 @@ public class Formatter {
      * @return strikethrough text. Example: <s>"strikethrough text"</s>
      */
     public static String strikethrough(String text) {
-        if (text == null || text.isBlank()) return text;
+        if (text == null || text.trim().length() == 0) return text;
         String strikethrough = "~";
         return strikethrough + text + strikethrough;
     }
@@ -48,7 +48,7 @@ public class Formatter {
      * @return text formatted as code. Example: <code>"code text"</code>
      */
     public static String code(String text) {
-        if (text == null || text.isBlank()) return text;
+        if (text == null || text.trim().length() == 0) return text;
         String code = "```";
         return code + text + code;
     }

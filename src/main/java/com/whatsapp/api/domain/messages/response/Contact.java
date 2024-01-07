@@ -7,9 +7,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * The type Contact.
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public record Contact(
+public class Contact {
 
-        @JsonProperty("input") String input,
+    @JsonProperty("input")
+    String input;
 
-        @JsonProperty("wa_id") String waId) {
+    @JsonProperty("wa_id")
+    String waId;
+
+    public Contact(String input, String waId) {
+        this.input = input;
+        this.waId = waId;
+    }
+
+    public String input() {
+        return input;
+    }
+
+    public void input(String input) {
+        this.input = input;
+    }
+
+    public String waId() {
+        return waId;
+    }
+
+    public void waId(String waId) {
+        this.waId = waId;
+    }
+    
 }

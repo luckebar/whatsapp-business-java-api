@@ -8,5 +8,21 @@ import com.whatsapp.api.domain.templates.type.LanguageType;
  * @param code Language code. See {@link LanguageType}
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public record Language(@JsonProperty("code") LanguageType code) {
+public class Language {
+
+    @JsonProperty("code")
+    LanguageType code;
+
+    public Language(LanguageType code) {
+        this.code = code;
+    }
+
+    public LanguageType code() {
+        return code;
+    }
+
+    public void code(LanguageType code) {
+        this.code = code;
+    }
+
 }

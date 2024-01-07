@@ -57,7 +57,7 @@ public class MessageTemplate {
      */
     public MessageTemplate addComponents(Component<?>... components) {
         if (this.components == null) this.components = new ArrayList<>();
-        if (components != null) this.components.addAll(Arrays.stream(components).toList());
+        if (components != null) this.components.addAll(Arrays.asList(components));
         return this;
 
     }

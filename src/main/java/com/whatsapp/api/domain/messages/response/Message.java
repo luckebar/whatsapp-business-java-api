@@ -7,7 +7,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * The type Message.
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public record Message(
+public class Message {
+    @JsonProperty("id") String id;
 
-        @JsonProperty("id") String id) {
+    public Message(String id) {
+        this.id = id;
+    }
+
+    public String id() {
+        return id;
+    }
+
+    public void id(String id) {
+        this.id = id;
+    }
+    
+    
 }

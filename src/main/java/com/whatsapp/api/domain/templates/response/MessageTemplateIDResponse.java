@@ -6,9 +6,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * The type Message template id response.
  *
- * @deprecated use {@link com.whatsapp.api.domain.templates.MessageTemplate} instead
+ * @deprecated use {@link com.whatsapp.api.domain.templates.MessageTemplate}
+ * instead
  */
-@Deprecated(forRemoval = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public record MessageTemplateIDResponse(@JsonProperty("id") String id) {
+public class MessageTemplateIDResponse {
+
+    @JsonProperty("id")
+    String id;
+
+    public MessageTemplateIDResponse(String id) {
+        this.id = id;
+    }
+
+    public String id() {
+        return id;
+    }
+
+    public void id(String id) {
+        this.id = id;
+    }
+
 }

@@ -88,7 +88,7 @@ public class Example {
      */
     public Example addHeaderHandleExamples(String... example) {
         if (this.headerHandle == null) this.headerHandle = new ArrayList<>();
-        if (example != null) this.headerHandle.addAll(Arrays.stream(example).toList());
+        if (example != null) this.headerHandle.addAll(Arrays.asList(example));
         return this;
     }
 
@@ -100,7 +100,7 @@ public class Example {
      */
     public Example addHeaderTextExamples(String... example) {
         if (this.headerText == null) this.headerText = new ArrayList<>();
-        if (example != null) this.headerText.addAll(Arrays.stream(example).toList());
+        if (example != null) this.headerText.addAll(Arrays.asList(example));
         return this;
     }
 
@@ -112,7 +112,7 @@ public class Example {
      */
     public Example addBodyTextExamples(String... example) {
         if (bodyText == null) this.bodyText = new ArrayList<>();
-        if (example != null) bodyText.add(Arrays.stream(example).toList());
+        if (example != null) bodyText.add(Arrays.asList(example));
         return this;
     }
 }

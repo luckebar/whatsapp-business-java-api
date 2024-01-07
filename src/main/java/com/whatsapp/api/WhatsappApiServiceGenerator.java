@@ -119,7 +119,7 @@ public class WhatsappApiServiceGenerator {
      */
     public static <S> S createService(Class<S> serviceClass, String token) {
 
-        var baseUrl = WhatsappApiConfig.BASE_DOMAIN;
+        String baseUrl = WhatsappApiConfig.BASE_DOMAIN;
         return createService(serviceClass, token, baseUrl);
 
     }
@@ -158,14 +158,14 @@ public class WhatsappApiServiceGenerator {
             Response<T> response = call.execute();
             if (response.isSuccessful()) {
 
-                var fileName = Objects.requireNonNull(response.headers().get("Content-Disposition")).split("=")[1];
+                String fileName = Objects.requireNonNull(response.headers().get("Content-Disposition")).split("=")[1];
                 ResponseBody body = (ResponseBody) response.body();
 
                 assert body != null;
                 return new MediaFile(fileName, body.bytes());
             } else {
                 if (response.code() == 404) {
-                    var error = new Error(404, null, 404, null, "Not found", null, null, null, false, null, null);
+                    Error error = new Error(404, null, 404, null, "Not found", null, null, null, false, null, null);
                     throw new WhatsappApiException(new WhatsappApiError(error));
                 }
                 WhatsappApiError apiError = getWhatsappApiError(response);

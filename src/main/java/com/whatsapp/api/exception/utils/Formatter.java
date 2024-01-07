@@ -5,7 +5,7 @@ package com.whatsapp.api.exception.utils;
  *
  * @deprecated use {@link com.whatsapp.api.utils.Formatter} instead
  */
-@Deprecated(forRemoval = true)
+
 public class Formatter {
 
     /**

@@ -19,17 +19,16 @@
         WhatsApp Business Management API.
     </description>
 
-    <developers>
+    <!--developers>
         <developer>
             <email>mauriciobinda@hotmail.com</email>
             <name>Mauricio Binda</name>
             <url>https://github.com/Bindambc</url>
             <id>bindambc</id>
         </developer>
-    </developers>
+    </developers-->
 
     <properties>
-        <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <com.squareup.retrofit2.version>2.9.0</com.squareup.retrofit2.version>
         <org.mockito.version>5.2.0</org.mockito.version>
@@ -41,7 +40,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/Bindambc/whatsapp-business-java-api</url>
+            <url>https://github.com/luckebar/whatsapp-business-java-api.git</url>
         </repository>
     </distributionManagement>
 
@@ -118,8 +117,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>

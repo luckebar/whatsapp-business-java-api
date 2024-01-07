@@ -96,7 +96,10 @@ public class WhatsappBusinessManagementApi {
      * @see <a href="https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates">Message templates</a>
      */
     public MessageTemplates retrieveTemplates(String whatsappBusinessAccountId, int limit) {
-        return executeSync(whatsappBusinessManagementApiService.retrieveTemplates(whatsappBusinessAccountId, Map.of("limit", limit)));
+        Map<String, Object> myMap = new HashMap<String, Object>() {{
+            put("limit", limit);
+        }};
+        return executeSync(whatsappBusinessManagementApiService.retrieveTemplates(whatsappBusinessAccountId, myMap));
     }
 
     /**
@@ -108,7 +111,10 @@ public class WhatsappBusinessManagementApi {
      * @see <a href="https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates">Message templates</a>
      */
     public MessageTemplates retrieveTemplates(String whatsappBusinessAccountId, String templateName) {
-        return executeSync(whatsappBusinessManagementApiService.retrieveTemplates(whatsappBusinessAccountId, Map.of("name", templateName)));
+        Map<String, Object> myMap = new HashMap<String, Object>() {{
+            put("name", templateName);
+        }};
+        return executeSync(whatsappBusinessManagementApiService.retrieveTemplates(whatsappBusinessAccountId, myMap));
     }
 
     /**
@@ -120,7 +126,11 @@ public class WhatsappBusinessManagementApi {
      * @return message templates
      */
     public MessageTemplates retrieveTemplates(String whatsappBusinessAccountId, int limit, String after) {
-        return executeSync(whatsappBusinessManagementApiService.retrieveTemplates(whatsappBusinessAccountId, Map.of("limit", limit, "after", after)));
+        Map<String, Object> myMap = new HashMap<String, Object>() {{
+            put("limit", limit);
+            put("after", after);
+        }};
+        return executeSync(whatsappBusinessManagementApiService.retrieveTemplates(whatsappBusinessAccountId, myMap));
     }
 
     /**
@@ -150,7 +160,10 @@ public class WhatsappBusinessManagementApi {
      */
     public PhoneNumber retrievePhoneNumber(String phoneNumberId, String... fields) {
         Objects.requireNonNull(fields, "fields cannot be null");
-        return executeSync(whatsappBusinessManagementApiService.retrievePhoneNumber(phoneNumberId, Map.of("fields", String.join(",", fields))));
+        Map<String, Object> myMap = new HashMap<String, Object>() {{
+            put("fields", String.join(",", fields));
+        }};
+        return executeSync(whatsappBusinessManagementApiService.retrievePhoneNumber(phoneNumberId, myMap));
     }
 
 
@@ -205,7 +218,10 @@ public class WhatsappBusinessManagementApi {
      * @see <a href="https://developers.facebook.com/docs/graph-api/reference/whats-app-business-account-to-number-current-status/whatsapp_commerce_settings">api docs</a>
      */
     public GraphCommerceSettings getWhatsappCommerceSettings(String phoneNumberId, String... fields) {
-        return executeSync(whatsappBusinessManagementApiService.getWhatsappCommerceSettings(phoneNumberId, Map.of("fields", String.join(",", fields))));
+        Map<String, String> myMap = new HashMap<String, String>() {{
+            put("fields", String.join(",", fields));
+        }};
+        return executeSync(whatsappBusinessManagementApiService.getWhatsappCommerceSettings(phoneNumberId, myMap));
     }
 
     /**

@@ -7,9 +7,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  * @param name Specifies the sender's profile name.
  */
-public record Profile(
+public class Profile {
 
-        @JsonProperty("name") String name
+    @JsonProperty("name")
+    String name;
 
-) {
+    public Profile(String name) {
+        this.name = name;
+    }
+
+    public String name() {
+        return name;
+    }
+
+    public void name(String name) {
+        this.name = name;
+    }
+    
 }
