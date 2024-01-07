@@ -69,7 +69,7 @@ This sdk implements whatsapp business cloud api version v16.0. [See api changelo
 
 ### Maven
 
-**1. Add the [JitPack](https://jitpack.io/#Bindambc/whatsapp-business-java-api) repository to your build file:**
+**1. Add the [JitPack](https://jitpack.io/#luckebar/whatsapp-business-java-api) repository to your build file:**
 
 ```xml
 	<repositories>
