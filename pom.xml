@@ -19,14 +19,14 @@
         WhatsApp Business Management API.
     </description>
 
-    <!--developers>
+    <developers>
         <developer>
-            <email>mauriciobinda@hotmail.com</email>
-            <name>Mauricio Binda</name>
-            <url>https://github.com/Bindambc</url>
-            <id>bindambc</id>
+            <email>luckebar@libero.it</email>
+            <name>Luca Bartoli</name>
+            <url>https://github.com/luckebar</url>
+            <id>luckebar</id>
         </developer>
-    </developers-->
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
